@@ -3,14 +3,14 @@ import { getDatabase, ref, update } from "firebase/database";
 import { getAuth, signInAnonymously } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCMDNODPT-oQSa1IzZnVubenDm6y4PhBsU",
-  authDomain: "cold-chain-logistics-monitor.firebaseapp.com",
-  databaseURL: "https://cold-chain-logistics-monitor-default-rtdb.firebaseio.com",
-  projectId: "cold-chain-logistics-monitor",
-  storageBucket: "cold-chain-logistics-monitor.firebasestorage.app",
-  messagingSenderId: "892855361000",
-  appId: "1:892855361000:web:5522d17cf8ca3680d7585d",
-  measurementId: "G-38XY7S679X"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
